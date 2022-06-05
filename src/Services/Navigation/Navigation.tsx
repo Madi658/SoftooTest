@@ -1,26 +1,23 @@
 import "react-native-gesture-handler";
-import React, { useState } from "react";
+import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-
-import ProductsScreen from "../../Screens/ProductScreen/ProductScreen";
-import { BottomSheetSlideOutSpec } from "@react-navigation/stack/lib/typescript/src/TransitionConfigs/TransitionSpecs";
-import BucketScreen from "../../Screens/BucketScreen/BucketScreen";
-import ProductDetails from "../../Screens/ProductDetails/ProductDetails";
+import { ProductsScreen } from "../../Screens/ProductScreen/productScreen";
+import { BucketScreen } from "../../Screens/BucketScreen/bucketScreen";
+import { SCREENS } from "../Utils/constants";
 
 export const Navigation = () => {
-    const Stack = createStackNavigator();
+  const Stack = createStackNavigator();
+
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={"ProductsScreen"}
+        initialRouteName={SCREENS.PRODUCT_SCREEN}
         screenOptions={{ headerShown: false, header: () => null }}
       >
-        <Stack.Screen name={"ProductsScreen"} component={ProductsScreen} />
-        <Stack.Screen name={"BucketScreen"} component={BucketScreen} />
-
-    
+        <Stack.Screen name={SCREENS.PRODUCT_SCREEN} component={ProductsScreen} />
+        <Stack.Screen name={SCREENS.BUCKET_SCREEN} component={BucketScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

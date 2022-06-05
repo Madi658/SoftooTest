@@ -1,14 +1,13 @@
-import {ViewStyle, StyleSheet, TextStyle} from 'react-native';
-import {ImageStyle} from 'react-native-fast-image';
+import { ViewStyle, StyleSheet, TextStyle } from 'react-native';
 
 interface Style {
   container: ViewStyle;
   ProductImgContainer: ViewStyle;
   productText: TextStyle;
-  counterContainer: ViewStyle;
   counterText: TextStyle;
   BottonContainer: ViewStyle;
   ButtonText: ViewStyle;
+  modalText:TextStyle;
 }
 
 export const styles = StyleSheet.create({
@@ -21,6 +20,7 @@ export const styles = StyleSheet.create({
     borderWidth: 0.5,
     margin: '2.5%',
   },
+  modalSpace: { justifyContent: "flex-end", margin: 0, height: 300 },
   modal: {
     backgroundColor: 'white',
     borderTopLeftRadius: 30,
@@ -43,21 +43,19 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     alignSelf: 'center',
   },
+  modalText:{
+    marginLeft: 10,
+    color: 'black',
+    fontWeight: 'bold'
+  },
   ProductImgContainer: {
     width: '90%',
     height: 200,
     backgroundColor: 'red',
     borderRadius: 5,
   },
-  productText: {width: '90%', marginTop: 5},
-  PriceText: {fontWeight: 'bold', color: 'black'},
-  counterContainer: {
-    width: '90%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginVertical: 10,
-    alignItems: 'center',
-  },
+  productText: { width: '90%', marginTop: 5 },
+  PriceText: { fontWeight: 'bold', color: 'black' },
   counterText: {
     width: 30,
     height: 30,
@@ -73,5 +71,5 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 5,
   },
-  ButtonText: {fontWeight: 'bold', color: 'white'},
+  ButtonText: { fontWeight: 'bold', color: 'white' },
 });

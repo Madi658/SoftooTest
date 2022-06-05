@@ -1,73 +1,47 @@
 //import liraries
-import { useNavigation } from '@react-navigation/native';
-import React, { Component, FC, useState } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import { styles } from './ProductCard.style';
-import FastImage from "react-native-fast-image";
-import { BucketIcon, StaticImage } from '../../Assets';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import Icon from "react-native-dynamic-vector-icons";
+import React, { FC, useState } from 'react';
+import { View, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-// create a component
+import FastImage from "react-native-fast-image";
+
+import { styles } from './productCard.style';
+import ActionButton from '../ActionButton/actionButton';
+import { Counter } from '../Counter/counter';
+
 interface props {
-    item: any;
+  item: any;
 }
-const ProductCard: FC<props> = ({ item }) => {
-    const [counter, setcounter] = useState<number>(0)
+// create a component
+export const ProductCard: FC<props> = ({ item }) => {
+  const [counter, setCounter] = useState<number>(0)
 
+  const AddToBucket = async () => {
+    let tempArray = [];
+    let tempObject = { ...item, count: counter };
+    await AsyncStorage.getItem('BucketList').then((_item: any) => {
+      if (_item) {
+        let filteredArray = JSON.parse(_item).filter(
+          (element: any) => element?.id !== item?.id);
+        tempArray = [...filteredArray]
+      }
+    })
+    tempArray.push(tempObject);
+    AsyncStorage.setItem('BucketList', JSON.stringify(tempArray));
+    setCounter(0);
+  }
 
-    const AddToBucket = async () => {
-        let temp1 = [];
-        let temp2 = { ...item, count: counter };
-        await AsyncStorage.getItem('BucketList').then((Item: any) => {
-            if (Item) {
-                let filteredArray = JSON.parse(Item).filter((i: any) => i.id !== item.id)
-                temp1 = [...filteredArray]
-            }
-        })
-        temp1.push(temp2);
-        AsyncStorage.setItem('BucketList', JSON.stringify(temp1));
-        setcounter(0);
-    }
-    return (
-        <View style={styles.container}>
-            <FastImage resizeMode='stretch' source={{ uri: item.img }} style={styles.ProductImgContainer} />
-            <Text numberOfLines={2} style={styles.productText}>{item.name}</Text>
-            <Text style={styles.PriceText}>Price:${item.price}</Text>
-            <View style={styles.counterContainer}>
-                <TouchableOpacity disabled={counter <= 0 ? true : false} onPress={() => setcounter(counter - 1)} style={styles.counterText}>
-                    <Icon
-                        name="minus"
-                        type="Entypo"
-                        color='white'
-                        size={30}
-                    />
-                </TouchableOpacity >
-                <Text style={styles.PriceText}>{counter}</Text>
-                <TouchableOpacity onPress={() => setcounter(counter + 1)} style={styles.counterText}>
-                    <Icon
-                        name="plus"
-                        type="Entypo"
-                        size={30}
-                        color='white'
-                    />
-                </TouchableOpacity>
-            </View>
-            {counter > 0 ?
-                <TouchableOpacity onPress={AddToBucket} style={styles.BottonContainer}>
-                    <Text style={styles.ButtonText}>Add to bucket  </Text>
-                    <Icon
-                        name="cart-plus"
-                        type="FontAwesome"
-                        size={20}
-                        color='white'
-                    />
-                </TouchableOpacity> : null}
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <FastImage resizeMode='stretch' source={{ uri: item.img }} style={styles.ProductImgContainer} />
+      <Text numberOfLines={2} style={styles.productText}>{item.name}</Text>
+      <Text style={styles.PriceText}>Price:${item.price}</Text>
+      <Counter
+        counter={counter}
+        actionAdd={() => setCounter(counter + 1)}
+        actionSub={() => setCounter(counter - 1)}
+      />
+      {counter > 0 ? <ActionButton text='Save Changes' action={AddToBucket} from='product' /> : null}
+    </View>
+  );
 };
 
-// define your styles
-
-//make this component available to the app
-export default ProductCard;

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac/Desktop/Mobail_Development/Test/Test/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/mac/Desktop/Mobail_Development/SoftooTest/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/mac/.gradle/caches/transforms-3/5efa136d6b7a2c594211658eacead3c1/transformed/core-1.6.0/res/values/values.xml",
@@ -135,6 +135,23 @@
                     }
                 },
                 {
+                    "source": "/Users/mac/Desktop/Mobail_Development/SoftooTest/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,262",
+                        "endColumns": "63,68",
+                        "endOffsets": "215,326"
+                    },
+                    "to": {
+                        "startLines": "652,653",
+                        "startColumns": "4,4",
+                        "startOffsets": "41476,41540",
+                        "endColumns": "63,68",
+                        "endOffsets": "41535,41604"
+                    }
+                },
+                {
                     "source": "/Users/mac/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -149,25 +166,6 @@
                         "startOffsets": "37472,37541",
                         "endColumns": "68,56",
                         "endOffsets": "37536,37593"
-                    }
-                },
-                {
-                    "source": "/Users/mac/Desktop/Mobail_Development/Test/Test/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "180"
-                    },
-                    "to": {
-                        "startLines": "818",
-                        "startColumns": "4",
-                        "startOffsets": "59514",
-                        "endLines": "820",
-                        "endColumns": "12",
-                        "endOffsets": "59640"
                     }
                 },
                 {
@@ -204,23 +202,6 @@
                         "endLines": "57,346,347,348,356,357,358,585,6650",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "3301,22510,22558,22614,23300,23376,23448,37895,417038"
-                    }
-                },
-                {
-                    "source": "/Users/mac/Desktop/Mobail_Development/Test/Test/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "156,262",
-                        "endColumns": "63,68",
-                        "endOffsets": "215,326"
-                    },
-                    "to": {
-                        "startLines": "652,653",
-                        "startColumns": "4,4",
-                        "startOffsets": "41476,41540",
-                        "endColumns": "63,68",
-                        "endOffsets": "41535,41604"
                     }
                 },
                 {
@@ -274,6 +255,23 @@
                         "startOffsets": "40079",
                         "endColumns": "42",
                         "endOffsets": "40117"
+                    }
+                },
+                {
+                    "source": "/Users/mac/Desktop/Mobail_Development/SoftooTest/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
+                    },
+                    "to": {
+                        "startLines": "688",
+                        "startColumns": "4",
+                        "startOffsets": "43995",
+                        "endColumns": "41",
+                        "endOffsets": "44032"
                     }
                 },
                 {
@@ -332,20 +330,22 @@
                     }
                 },
                 {
-                    "source": "/Users/mac/Desktop/Mobail_Development/Test/Test/android/app/src/main/res/values/strings.xml",
+                    "source": "/Users/mac/Desktop/Mobail_Development/SoftooTest/android/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "1",
+                        "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
+                        "startOffsets": "54",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "180"
                     },
                     "to": {
-                        "startLines": "688",
+                        "startLines": "818",
                         "startColumns": "4",
-                        "startOffsets": "43995",
-                        "endColumns": "41",
-                        "endOffsets": "44032"
+                        "startOffsets": "59514",
+                        "endLines": "820",
+                        "endColumns": "12",
+                        "endOffsets": "59640"
                     }
                 },
                 {

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac/Desktop/Mobail_Development/Test/Test/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml",
+            "outputFile": "/Users/mac/Desktop/Mobail_Development/SoftooTest/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml",
             "map": [
                 {
                     "source": "/Users/mac/.gradle/caches/transforms-3/5efa136d6b7a2c594211658eacead3c1/transformed/core-1.6.0/res/values-te/values-te.xml",
