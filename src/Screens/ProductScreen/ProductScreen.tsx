@@ -17,7 +17,7 @@ interface props {
 export const ProductsScreen: FC<props> = ({ navigation }) => {
 
   const ProductsQuery = useQuery("posts", GetAllProductsAPI);
-  //--------------------------------
+  
   const GoToBucket = () => {
     navigation.push(SCREENS.BUCKET_SCREEN);
   }

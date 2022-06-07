@@ -18,7 +18,7 @@ export const BucketCard: FC<props> = ({ item, setbucketlist }) => {
   const [counter, setCounter] = useState<number>(item.count)
   const [isModal, setisModal] = useState<boolean>(false);
   const [editCheck, setEditCheck] = useState<boolean>();
-  //--------------------------------------
+
   const EditQuantity = async () => {
     let tempArray = [];
     let tempObject = { ...item, count: counter };
@@ -33,7 +33,7 @@ export const BucketCard: FC<props> = ({ item, setbucketlist }) => {
     setbucketlist(tempArray);
     setEditCheck(false);
   }
-  //--------------------------------------
+
   const DeleteProduct = async () => {
     let tempArray
     await AsyncStorage.getItem('BucketList').then((_item: any) => {
@@ -44,11 +44,11 @@ export const BucketCard: FC<props> = ({ item, setbucketlist }) => {
     })
     AsyncStorage.setItem('BucketList', JSON.stringify(tempArray));
   }
-  //--------------------------------------
+
   const ModalSwitch = () => {
     setisModal(!isModal)
   }
-  //--------------------------------------
+
   const EditPress = () => {
     setEditCheck(true);
     setisModal(!isModal)

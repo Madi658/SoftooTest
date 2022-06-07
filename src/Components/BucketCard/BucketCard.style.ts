@@ -7,7 +7,7 @@ interface Style {
   counterText: TextStyle;
   BottonContainer: ViewStyle;
   ButtonText: ViewStyle;
-  modalText:TextStyle;
+  modalText: TextStyle;
 }
 
 export const styles = StyleSheet.create({
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     alignSelf: 'center',
   },
-  modalText:{
+  modalText: {
     marginLeft: 10,
     color: 'black',
     fontWeight: 'bold'

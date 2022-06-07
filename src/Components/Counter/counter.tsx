@@ -1,5 +1,5 @@
 //import liraries
-import React, { Component, FC } from 'react';
+import React, { FC } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-dynamic-vector-icons';
 

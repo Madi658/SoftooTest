@@ -16,21 +16,21 @@ export const BucketScreen: FC<props> = ({ navigation }) => {
 
   const [bucketlist, setbucketlist] = useState<any>([])
   const [totalPrice, setTotalPrice] = useState<number>(0);
-  //----------------------------
+
   const GoBack = () => {
     navigation.goBack()
   }
-  //----------------------------
+
   const GetBucketList = async () => {
     await AsyncStorage.getItem('BucketList').then((item: any) => {
       setbucketlist(JSON.parse(item));
     })
   }
-  //----------------------------
+
   useEffect(() => {
     GetBucketList();
   }, [])
-  //----------------------------
+
   useMemo(() => {
     let Totaltemp: number = 0;
     bucketlist?.forEach((element: any) => {
