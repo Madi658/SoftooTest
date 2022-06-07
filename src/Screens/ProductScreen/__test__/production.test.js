@@ -17,7 +17,7 @@ const mockDataTodos = [
 describe("Product Screen", () => {
   it("Testing FlatList", () => {
     test("Error component should be render when error is true", () => {
-      const componentTree = render(<ListItem todos={mockDataTodos} />);
+      const componentTree = render(<FlatList todos={mockDataTodos} />);
       expect(componentTree.getAllByType(FlatList).length).toBe(1);
       expect(componentTree.getAllByType(Item).length).toBe(
         mockDataTodos.length

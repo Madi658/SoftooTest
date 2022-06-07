@@ -12,11 +12,11 @@ interface props {
 export const Counter: FC<props> = ({ counter, actionAdd, actionSub }) => {
   return (
     <View style={styles.counterContainer}>
-      <TouchableOpacity disabled={counter <= 0 ? true : false} onPress={actionSub} style={styles.counterText}>
+      <TouchableOpacity testID='decrement' disabled={counter <= 0 ? true : false} onPress={actionSub} style={styles.counterText}>
         <Icon name="minus" type="Entypo" color='white' size={30} />
       </TouchableOpacity >
       <Text style={styles.PriceText}>{counter}</Text>
-      <TouchableOpacity onPress={actionAdd} style={styles.counterText}>
+      <TouchableOpacity testID='decrement' onPress={actionAdd} style={styles.counterText}>
         <Icon name="plus" type="Entypo" size={30} color='white' />
       </TouchableOpacity>
     </View>

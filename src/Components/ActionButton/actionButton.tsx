@@ -1,7 +1,7 @@
 //import liraries
 import React, { FC } from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-dynamic-vector-icons';
+// import Icon from 'react-native-dynamic-vector-icons';
 
 interface props {
   text: string;

@@ -31,7 +31,7 @@ export const ProductsScreen: FC<props> = ({ navigation }) => {
         <>
           <View style={styles.HeaderContianer}>
             <Text style={styles.HeaderText}>Products</Text>
-            <TouchableOpacity onPress={GoToBucket}>
+            <TouchableOpacity testID='cartButton' onPress={GoToBucket}>
               <Icon name="shopping-cart" type="FontAwesome" size={30} color='black' />
             </TouchableOpacity>
           </View>

@@ -12,7 +12,7 @@ interface props {
   item: any;
 }
 // create a component
-export const ProductCard: FC<props> = ({ item }) => {
+export const ProductCard: FC<props> = ({ item,testIDincrement,testIDdecrement }) => {
   const [counter, setCounter] = useState<number>(0)
 
   const AddToBucket = async () => {
